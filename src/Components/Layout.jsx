@@ -1,18 +1,12 @@
-import { useState } from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Main from "./Main";
-import SignUp from "./Signup";
-function Layout({ children }) {
-	const [isRegisterOpen, setIsRegisterOpen] = useState(true);
+
+function Layout() {
 	return (
 		<div className="min-h-screen ">
-			<Navbar
-				setIsRegisterOpen={setIsRegisterOpen}
-				isRegisterOpen={isRegisterOpen}
-			/>
+			<Navbar />
 
-			<SignUp isRegisterOpen={isRegisterOpen} />
 			<Main />
 			<Footer />
 		</div>

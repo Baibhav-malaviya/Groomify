@@ -5,9 +5,8 @@ import { NavLink } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import Logo from "./Logo";
 import Row from "./Row";
-import SignUp from "./Signup";
 
-function Navbar({ setIsRegisterOpen, isRegisterOpen }) {
+function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const [isSticky, setIsSticky] = useState(false);
@@ -40,12 +39,48 @@ function Navbar({ setIsRegisterOpen, isRegisterOpen }) {
 				<Logo />
 				<Row width="w-auto" bgColor="bg-transparent" padding={false}>
 					<ul className="flex space-x-5 text-lg font-semibold text-white">
-						<NavLink to={"/"}>Home</NavLink>
-						<NavLink to={"/products"}>Shop</NavLink>
-						<NavLink to={"/blog"}>Blog</NavLink>
-						<NavLink to={"/faq"}>Faq's</NavLink>
-						<NavLink to={"/contact"}>Contact</NavLink>
-						<NavLink to={"/cart"}>Cart</NavLink>
+						<NavLink
+							className={"flex justify-center group transition-all relative"}
+							to={"/"}
+						>
+							Home
+							<div className="absolute bottom-0 w-0 transition-all duration-200 group-hover:w-full h-[2px] mt-4 bg-white"></div>
+						</NavLink>
+						<NavLink
+							className={"flex justify-center group transition-all relative"}
+							to={"/products"}
+						>
+							Shop
+							<div className="absolute bottom-0 w-0 transition-all duration-200 group-hover:w-full h-[2px] mt-4 bg-white"></div>
+						</NavLink>
+						<NavLink
+							className={"flex justify-center group transition-all relative"}
+							to={"/blog"}
+						>
+							Blog
+							<div className="absolute bottom-0 w-0 transition-all duration-200 group-hover:w-full h-[2px] mt-4 bg-white"></div>
+						</NavLink>
+						<NavLink
+							className={"flex justify-center group transition-all relative"}
+							to={"/faq"}
+						>
+							Faq's
+							<div className="absolute bottom-0 w-0 transition-all duration-200 group-hover:w-full h-[2px]  bg-white"></div>
+						</NavLink>
+						<NavLink
+							className={"flex justify-center group transition-all relative"}
+							to={"/contact"}
+						>
+							Contact
+							<div className="absolute bottom-0 w-0 transition-all duration-200 group-hover:w-full h-[2px]  bg-white"></div>
+						</NavLink>
+						<NavLink
+							className={"flex justify-center group transition-all relative"}
+							to={"/cart"}
+						>
+							Cart
+							<div className="absolute bottom-0 w-0 transition-all duration-200 group-hover:w-full h-[2px]  bg-white"></div>
+						</NavLink>
 					</ul>
 				</Row>
 				<Row
@@ -57,9 +92,9 @@ function Navbar({ setIsRegisterOpen, isRegisterOpen }) {
 					<span onClick={() => setIsOpen(!isOpen)}>
 						{isOpen ? <Cross className="rotate-45" /> : <Search />}
 					</span>
-					<span onClick={() => setIsRegisterOpen(!isRegisterOpen)}>
+					<NavLink to={"/signin"}>
 						<User />
-					</span>
+					</NavLink>
 					<span>
 						<Heart />
 					</span>

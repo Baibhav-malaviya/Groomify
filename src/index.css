@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active div {
+	position: absolute;
+	width: 100%;
+	background-color: white;
+	height: 2px;
+}
