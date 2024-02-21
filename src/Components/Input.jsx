@@ -21,14 +21,16 @@ function Input({
 		<div
 			className={` bg-inherit h-auto flex flex-col md:flex-row md:items-center md:justify-between space-y-2  ${width}`}
 		>
-			<div className="flex justify-between w-40 ">
-				<label
-					htmlFor={id}
-					className={`h-auto font-bold text-base  cursor-pointer ${color}`}
-				>
-					{label}
-				</label>
-			</div>
+			{label !== "" && (
+				<div className="flex justify-between w-40 mr-5">
+					<label
+						htmlFor={id}
+						className={`h-auto font-bold text-xl   cursor-pointer ${color}`}
+					>
+						{label}
+					</label>
+				</div>
+			)}
 			<input
 				id={id}
 				type={type}
@@ -37,7 +39,7 @@ function Input({
 				value={value}
 				name={name}
 				{...props}
-				className={`h-10 rounded  grow ring-2 ring-teal-700  px-2 ${
+				className={`h-10 rounded  grow ring-2 ring-teal-700  p-5 ${
 					focus
 						? " focus:shadow-md focus:outline-none focus:ring-1 focus:ring-primary-200 focus:ring-offset-1  "
 						: " "

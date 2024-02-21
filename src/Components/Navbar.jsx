@@ -1,14 +1,16 @@
 import { Cross, Heart, Search, ShoppingCart, User } from "lucide-react";
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import SearchBar from "./SearchBar";
 import Logo from "./Logo";
 import Row from "./Row";
 
 function Navbar() {
-	const [isOpen, setIsOpen] = useState(false);
+	const { cart } = useSelector((state) => state.cart);
 
+	const [isOpen, setIsOpen] = useState(false);
 	const [isSticky, setIsSticky] = useState(false);
 
 	useEffect(() => {
@@ -98,9 +100,14 @@ function Navbar() {
 					<span>
 						<Heart />
 					</span>
-					<span>
+					<Link to={"/cart"} className="relative">
 						<ShoppingCart />
-					</span>
+						{cart.length > 0 && (
+							<span className="absolute -top-3 -right-2 px-[6px] py-[1.5px] text-xs font-semibold bg-red-500 rounded-full">
+								{cart.length}
+							</span>
+						)}
+					</Link>
 				</Row>
 			</Row>
 			<SearchBar isOpen={isOpen} />

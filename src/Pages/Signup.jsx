@@ -41,7 +41,9 @@ function SignUp() {
 							color="text-stone-800 "
 							placeholder="Enter your password"
 						/>
-						<Button bgColor="bg-teal-700">Sign Up</Button>
+						<Button bgColor="bg-teal-700" color="text-white">
+							Sign Up
+						</Button>
 					</form>
 				</div>
 			</div>

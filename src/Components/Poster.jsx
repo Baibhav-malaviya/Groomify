@@ -3,7 +3,7 @@ import { Truck, Wallet, ShoppingBasket, ArrowLeftRight } from "lucide-react";
 function Poster() {
 	return (
 		<div>
-			<div className="flex items-center justify-around h-20 text-teal-800 bg-teal-200/50 mt-14">
+			<div className="flex items-center justify-around h-20 mt-6 text-teal-800 bg-teal-200/50">
 				<div className="flex space-x-2">
 					<span>
 						<Truck />
