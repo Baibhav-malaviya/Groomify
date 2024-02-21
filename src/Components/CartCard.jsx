@@ -9,6 +9,7 @@ import {
 
 import { useDispatch } from "react-redux";
 import UpdateItem from "./UpdateItem";
+
 function CartCard({ item }) {
 	const dispatch = useDispatch();
 
@@ -32,29 +33,18 @@ function CartCard({ item }) {
 			<div className="grid w-full h-24 grid-cols-9 ">
 				<div className={`  col-span-2 ${divStyle}`}>
 					<img
-						src="/logo-groomify.jpg"
+						src={item.imageUri}
 						className="inline w-[80px] aspect-square bg-teal-700"
 						alt=""
 					/>
 				</div>
-				<div className={`col-span-2 ${divStyle}`}>Banana</div>
+				<div className={`col-span-2 font-semibold ${divStyle}`}>
+					{item.name}
+				</div>
 				<div className={`col-span-1 ${divStyle}`}>
 					{formatCurrency(item.price)}
 				</div>
 				<div className={`col-span-2 ${divStyle} space-x-4`}>
-					{/* <button
-						className="p-[2px] px-2 bg-teal-200 rounded-full"
-						onClick={() => dispatch(decreaseItemQuantity(item.id))}
-					>
-						<Minus />
-					</button>
-					<span>{item.quantity} </span>
-					<button
-						className="p-[2px] px-2 bg-teal-200 rounded-full"
-						onClick={(e) => handleIncrease(e, item.id)}
-					>
-						<Plus />
-					</button> */}
 					<UpdateItem id={item.id} quantity={item.quantity} />
 				</div>
 				<div className={`col-span-1 ${divStyle}`}>

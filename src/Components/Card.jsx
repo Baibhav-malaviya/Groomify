@@ -5,6 +5,7 @@ import { formatCurrency, formatName } from "../Helper/Formatter";
 import Button from "../Components/Button";
 import { add } from "../cartSlice";
 import { Link } from "react-router-dom";
+import { Heart } from "lucide-react";
 
 function Card({ item }) {
 	const { cart } = useSelector((state) => state.cart);
@@ -19,7 +20,7 @@ function Card({ item }) {
 	return (
 		<div className="relative flex flex-col h-auto overflow-hidden transition-all rounded shadow group w-72 hover:cursor-pointer shadow-teal-500">
 			<div className="overflow-hidden h-72 row-span-8 rows">
-				<img className="aspect-square " src="/logo-groomify.jpg" alt="" />
+				<img className="aspect-square " src={item.imageUri} alt="" />
 			</div>
 			<div className="flex flex-col p-2 space-y-2 ">
 				<div className="flex items-center justify-between py-[2px]">
@@ -53,10 +54,12 @@ function Card({ item }) {
 					<span>{formatCurrency(item.price / item.size)} / ml</span>
 				</div>
 
+				<div className="text-lg font-semibold">{formatName(item.name)}</div>
+
 				<div className="flex flex-wrap gap-2 ">
 					{item.ingredients.map((ing, idx) => (
 						<span
-							className="p-[3px] text-sm font-semibold text-teal-800 bg-teal-400/80 rounded"
+							className="p-[3px] px-2 text-sm font-semibold text-teal-800 bg-teal-400/80 rounded"
 							key={idx}
 						>
 							{formatName(ing)}
@@ -64,7 +67,7 @@ function Card({ item }) {
 					))}
 				</div>
 
-				<div className="text-sm text-stone-600">{item.desc}</div>
+				<Heart className="absolute right-4 bottom-2" />
 			</div>
 		</div>
 	);

@@ -12,7 +12,7 @@ function UpdateItem({ id, quantity }) {
 			>
 				<Minus />
 			</button>
-			<span>{quantity}</span>
+			<span className="font-mono font-semibold">{quantity}</span>
 			<button
 				className="p-[2px] px-2 bg-teal-200 rounded-full"
 				onClick={() => dispatch(increaseItemQuantity(id))}

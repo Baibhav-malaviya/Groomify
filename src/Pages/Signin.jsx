@@ -44,7 +44,7 @@ function SignIn() {
 			<div className="w-1/2">
 				<img
 					className="w-full h-full scale-90"
-					src="public/logo-groomify.jpg"
+					src="/logo-groomify.jpg"
 					alt=""
 				/>
 			</div>

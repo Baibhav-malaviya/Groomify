@@ -2,8 +2,8 @@ function BlogCard({ blog }) {
 	return (
 		<div className="overflow-hidden relative shadow-md    w-[500px] aspect-[1.8] cursor-pointer group">
 			<img
-				src="/logo-groomify.jpg"
-				className="transition-all duration-700 group-hover:scale-110"
+				src={blog.imageUri}
+				className="w-full transition-all duration-700 aspect-video group-hover:scale-110"
 				alt=""
 			/>
 			{/* <p className="absolute bottom-0 left-0 p-4 text-xl font-semibold text-white bg-teal-600 group-hover:hidden right-20">

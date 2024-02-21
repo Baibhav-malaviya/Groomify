@@ -8,10 +8,10 @@ function FaqCard({ question, isOpen, onOpen, children }) {
 			onClick={() =>
 				question.id !== isOpen ? onOpen(question.id) : onOpen(null)
 			}
-			className={`bg-red-600 h-auto hover:cursor-pointer w-[450px] text-white `}
+			className={` h-auto hover:cursor-pointer w-[450px] text-black `}
 		>
 			<div className="flex items-center justify-start w-full p-4 space-x-4 text-lg font-semibold text-teal-800 bg-teal-100 ">
-				{open ? <Plus /> : <Plus className="rotate-45" />}
+				{open ? <Plus className="rotate-45" /> : <Plus />}
 				<p className="">{question.title}</p>
 				{/* {open ? <p>{question.disc}</p> : <p></p>} */}
 			</div>

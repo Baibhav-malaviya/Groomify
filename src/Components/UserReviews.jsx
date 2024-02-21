@@ -13,12 +13,6 @@ import "swiper/css/bundle";
 import ReviewCard from "./ReviewCard";
 import Title from "./Title";
 
-// const swiper = new Swiper(".swiper", {
-// 	autoplay: {
-// 		delay: 5000,
-// 	},
-// });
-
 function UserReviews() {
 	const userReviews = [
 		{

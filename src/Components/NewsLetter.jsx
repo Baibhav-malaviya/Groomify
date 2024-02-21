@@ -1,30 +1,17 @@
 import Button from "./Button";
+import Title from "./Title";
 
 function NewsLetter() {
-	const title = "Our Newsletter".split("");
 	return (
 		<div className="p-10">
-			<div className="text-center my-10">
-				{title.map((el, idx) => {
-					return (
-						<span
-							className={`p-2 px-4 text-3xl font-bold uppercase  mx-1 rounded-lg  ${
-								el === " "
-									? "bg-transparent"
-									: "bg-teal-300 shadow-lg shadow-teal-800"
-							}`}
-							key={idx}
-						>
-							{el}
-						</span>
-					);
-				})}
+			<div className="text-center ">
+				<Title title={"Our Newsletter"} />
 			</div>
-			<div className="text-center my-16 space-y-5">
-				<p className="text-xl text-stone-600 font-semibold">
+			<div className="space-y-12 text-center ">
+				<p className="mt-16 text-xl font-semibold text-stone-600">
 					Promotion new products and sales. Directly to your inbox
 				</p>
-				<div className=" py-4 inline-flex space-x-3">
+				<div className="inline-flex py-4 space-x-3 ">
 					<input
 						type="text"
 						name=""

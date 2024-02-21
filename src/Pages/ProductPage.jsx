@@ -1,12 +1,11 @@
-import Poster from "../Components/Poster";
 import Products from "../Components/Products";
 import NewsLetter from "../Components/NewsLetter";
+import PosterPage from "./PosterPage";
 function ProductPage() {
 	return (
 		<div>
-			<Poster />
+			<PosterPage />
 			<Products />
-			<NewsLetter />
 		</div>
 	);
 }
