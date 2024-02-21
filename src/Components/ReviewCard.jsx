@@ -12,7 +12,7 @@ function ReviewCard({ review }) {
 			</p>
 			<div className="grid grid-cols-7 pr-8 mt-2">
 				<div className="col-span-2 p-2 ">
-					<img className="" src="public/logo-groomify.jpg" alt="" />
+					<img className="" src="/logo-groomify.jpg" alt="" />
 				</div>
 				<div className="flex flex-col justify-between col-span-4 p-2 pb-4 ">
 					<p className="text-3xl font-semibold text-stone-600">

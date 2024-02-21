@@ -2,7 +2,7 @@ function BlogCard({ blog }) {
 	return (
 		<div className="overflow-hidden relative shadow-md    w-[500px] aspect-[1.8] cursor-pointer group">
 			<img
-				src="public/logo-groomify.jpg"
+				src="/logo-groomify.jpg"
 				className="transition-all duration-700 group-hover:scale-110"
 				alt=""
 			/>

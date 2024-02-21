@@ -32,7 +32,7 @@ function CartCard({ item }) {
 			<div className="grid w-full h-24 grid-cols-9 ">
 				<div className={`  col-span-2 ${divStyle}`}>
 					<img
-						src="public/logo-groomify.jpg"
+						src="/logo-groomify.jpg"
 						className="inline w-[80px] aspect-square bg-teal-700"
 						alt=""
 					/>
