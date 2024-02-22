@@ -1,4 +1,4 @@
-import Input from "./Input";
+import PropTypes from "prop-types";
 import { formatCurrency } from "../Helper/Formatter";
 import { Link } from "react-router-dom";
 import { clearCart } from "../cartSlice";
@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Address from "./Address";
 import { useState } from "react";
 
-function TotalBill() {
+function TotalBill({ setIsPaid }) {
 	const dispatch = useDispatch();
 	const { cart } = useSelector((state) => state.cart);
 	const totalPrice = cart.reduce(
@@ -22,13 +22,13 @@ function TotalBill() {
 
 	if (totalPrice <= 0)
 		return (
-			<div className="mt-20 text-2xl font-semibold text-center">
+			<div className="text-2xl font-semibold text-center mt-28">
 				Your cart is Empty{" "}
 				<Link
 					to={"/products"}
 					className="p-2 px-3 text-base text-white bg-teal-800 rounded-lg hover:shadow-xl"
 				>
-					Shop Now
+					Start Shopping Now
 				</Link>
 			</div>
 		);
@@ -93,7 +93,10 @@ function TotalBill() {
 					<div>
 						<button
 							className="p-6 py-4 mx-5 mr-auto text-3xl font-semibold uppercase scale-50 border-4 border-teal-800 rounded-full hover:text-white hover:bg-teal-800"
-							onClick={() => dispatch(clearCart())}
+							onClick={() => {
+								dispatch(clearCart());
+								setIsPaid(true);
+							}}
 						>
 							Pay & Order
 						</button>
@@ -103,5 +106,9 @@ function TotalBill() {
 		</div>
 	);
 }
+
+TotalBill.propTypes = {
+	setIsPaid: PropTypes.func,
+};
 
 export default TotalBill;

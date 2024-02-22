@@ -9,7 +9,10 @@ function Footer() {
 				<p>Enjoy the biggest sale of your life</p>
 				<div className="flex space-x-5">
 					<span className="hover:text-teal-200">
-						<a href="https://www.instagram.com/_official_groomify?igsh=MWQzeHVmdXg1aDBiZg%3D%3D&utm_source=qr ">
+						<a
+							href="https://www.instagram.com/_official_groomify?igsh=MWQzeHVmdXg1aDBiZg%3D%3D&utm_source=qr "
+							target="_blank"
+						>
 							<Instagram size={40} />
 						</a>
 					</span>

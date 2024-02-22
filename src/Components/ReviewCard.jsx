@@ -5,7 +5,7 @@ import Rated from "./Rated";
 
 function ReviewCard({ review }) {
 	return (
-		<div className="flex flex-col p-4  bg-gray-200 rounded-lg w-[600px]">
+		<div className="flex flex-col p-4  bg-stone-800 rounded-lg w-[600px]">
 			<p className="p-2 pb-4 border-b-2 text-md ">
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
 				temporibus voluptatem. Deleniti quisquam maiores animi
@@ -15,10 +15,8 @@ function ReviewCard({ review }) {
 					<img className="" src="/logo-groomify.jpg" alt="" />
 				</div>
 				<div className="flex flex-col justify-between col-span-4 p-2 pb-4 ">
-					<p className="text-3xl font-semibold text-stone-600">
-						{review.fullName}
-					</p>
-					<p className="text-lg text-stone-600">{review.profession}</p>
+					<p className="text-3xl font-semibold text-white">{review.fullName}</p>
+					<p className="text-lg text-stone-400">{review.profession}</p>
 					<Rated />
 				</div>
 				<div className="flex items-center justify-center col-span-1 p-2 ">

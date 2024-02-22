@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
 
 import { formatCurrency, formatName } from "../Helper/Formatter";
+
 import Button from "../Components/Button";
 import { add } from "../cartSlice";
 import { Link } from "react-router-dom";
@@ -13,12 +14,12 @@ function Card({ item }) {
 	const added = cart.some((el) => el.id === item.id);
 
 	const dispatch = useDispatch();
-	const addToCart = (e, item) => {
-		e.preventDefault();
+	const addToCart = async (e, item) => {
+		// e.preventDefault();
 		dispatch(add(item));
 	};
 	return (
-		<div className="relative flex flex-col h-auto overflow-hidden transition-all rounded shadow group w-72 hover:cursor-pointer shadow-teal-500">
+		<div className="relative flex flex-col h-auto overflow-hidden transition-all rounded shadow group w-72 hover:cursor-pointer shadow-stone-900">
 			<div className="overflow-hidden h-72 row-span-8 rows">
 				<img className="aspect-square " src={item.imageUri} alt="" />
 			</div>
@@ -43,7 +44,7 @@ function Card({ item }) {
 							bgColor="bg-teal-300"
 							className={" translate-x-[110%] group-hover:translate-x-0"}
 						>
-							<Link to={"/cart"}>+ Go to Cart</Link>
+							<Link to={"/cart"}>Go to Cart</Link>
 						</Button>
 					)}
 				</div>

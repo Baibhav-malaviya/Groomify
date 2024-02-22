@@ -2,10 +2,12 @@ import { useSelector } from "react-redux";
 import CartCard from "../Components/CartCard";
 import Title from "../Components/Title";
 import TotalBill from "../Components/TotalBill";
+import Alert from "../Components/Alert";
+import { useState } from "react";
 
 function Cart() {
 	const { cart } = useSelector((state) => state.cart);
-
+	const [isPaid, setIsPaid] = useState(false);
 	const divStyle = "flex items-center justify-center p-2 text-2xl";
 
 	return (
@@ -27,7 +29,8 @@ function Cart() {
 				{cart.map((item) => (
 					<CartCard item={item} key={item.id} />
 				))}
-				<TotalBill />
+				<TotalBill setIsPaid={setIsPaid} />
+				<Alert isPaid={isPaid} setIsPaid={setIsPaid} />
 			</div>
 		</div>
 	);

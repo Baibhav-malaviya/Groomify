@@ -10,6 +10,8 @@ import "swiper/css";
 
 import "swiper/css/bundle";
 
+import { Truck, Wallet, ShoppingBasket, ArrowLeftRight } from "lucide-react";
+
 import Poster from "../Components/Poster";
 
 function PosterPage() {
@@ -33,27 +35,56 @@ function PosterPage() {
 		},
 	];
 	return (
-		<div className="text-white rounded-lg ">
-			<Swiper
-				modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-				spaceBetween={0}
-				slidesPerView={1}
-				autoplay={{ delay: 1500 }}
-				loop={true}
-				grabCursor={true}
-				speed={1500}
-				navigation
-				className="relative"
-				pagination={{ clickable: true }}
-				scrollbar={{ draggable: true }}
-			>
-				{posters.map((poster) => (
-					<SwiperSlide key={poster.id}>
-						<Poster poster={poster} />
-					</SwiperSlide>
-				))}
-			</Swiper>
-		</div>
+		<>
+			<div className="flex items-center justify-around h-20 my-2 text-teal-800 bg-teal-200/50">
+				<div className="flex space-x-2">
+					<span>
+						<Truck />
+					</span>
+					<p>Fast delivery</p>
+				</div>
+				<div className="flex space-x-2">
+					<span>
+						<Wallet />
+					</span>
+					<p>Cost effective</p>
+				</div>
+				<div className="flex space-x-2">
+					<span className="w-auto h-auto">
+						<ShoppingBasket />
+					</span>
+					<p>Pure Organic</p>
+				</div>
+				<div className="flex space-x-2">
+					<span className="w-auto h-auto">
+						<ArrowLeftRight />
+					</span>
+					<p>30 Day Return</p>
+				</div>
+			</div>
+
+			<div className="text-white rounded-lg ">
+				<Swiper
+					modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+					spaceBetween={0}
+					slidesPerView={1}
+					autoplay={{ delay: 1500 }}
+					loop={true}
+					grabCursor={true}
+					speed={1500}
+					navigation
+					className="relative"
+					pagination={{ clickable: true }}
+					scrollbar={{ draggable: true }}
+				>
+					{posters.map((poster) => (
+						<SwiperSlide key={poster.id}>
+							<Poster poster={poster} />
+						</SwiperSlide>
+					))}
+				</Swiper>
+			</div>
+		</>
 	);
 }
 
