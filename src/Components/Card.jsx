@@ -48,11 +48,17 @@ function Card({ item }) {
 					)}
 				</div>
 
-				<div className="flex items-center space-x-2">
-					<span>{item.size}ml</span>
-					<span className="font-bold">|</span>
-					<span>{formatCurrency(item.price / item.size)} / ml</span>
-				</div>
+				{item.size ? (
+					<div className="flex items-center space-x-2">
+						<span>{item.size}ml</span>
+						<span className="font-bold">|</span>
+						<span>{formatCurrency(item.price / item.size)} / ml</span>
+					</div>
+				) : (
+					<div>
+						Quantity: <span className="mx-2 font-semibold">1 pc</span>
+					</div>
+				)}
 
 				<div className="text-lg font-semibold">{formatName(item.name)}</div>
 
