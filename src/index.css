@@ -2,9 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard syntax */
+}
+
 .active div {
 	position: absolute;
 	width: 100%;
 	background-color: white;
 	height: 2px;
+}
+
+.blog-card:nth-child(even) > div {
+	translate: -100% 0;
+}
+.blog-card:nth-child(even):hover > div {
+	translate: 0% 0;
+}
+.blog-card:nth-child(odd) > div {
+	translate: 100% 0;
+}
+.blog-card:nth-child(odd):hover > div {
+	translate: 0 0;
 }

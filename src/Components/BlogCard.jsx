@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 function BlogCard({ blog }) {
 	return (
-		<div className="overflow-hidden relative shadow-md    w-[500px] aspect-[1.8] cursor-pointer group">
+		<div className="overflow-hidden relative shadow-md blog-card    w-[500px] aspect-[1.8] cursor-pointer group">
 			<img
 				src={blog.imageUri}
 				className="w-full transition-all duration-700 aspect-video group-hover:scale-110"
@@ -9,7 +10,7 @@ function BlogCard({ blog }) {
 			{/* <p className="absolute bottom-0 left-0 p-4 text-xl font-semibold text-white bg-teal-600 group-hover:hidden right-20">
 				{item.title}
 			</p> */}
-			<div className="absolute inset-0 flex flex-col justify-between p-6 transition-all duration-200 delay-100 translate-x-[100%]   bg-teal-600/85 group-hover:translate-x-0">
+			<div className="absolute inset-0 flex flex-col justify-between p-6 transition-all duration-200 delay-100 bg-teal-600/85 group-hover:translate-x-0">
 				<p className="text-xl font-semibold text-justify text-white">
 					{blog.title}
 				</p>
@@ -23,5 +24,9 @@ function BlogCard({ blog }) {
 		</div>
 	);
 }
+
+BlogCard.propTypes = {
+	blog: PropTypes.object,
+};
 
 export default BlogCard;

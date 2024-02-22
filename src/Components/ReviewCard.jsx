@@ -5,7 +5,7 @@ import Rated from "./Rated";
 
 function ReviewCard({ review }) {
 	return (
-		<div className="flex flex-col p-4  bg-teal-300 rounded-lg w-[600px]">
+		<div className="flex flex-col p-4  bg-gray-200 rounded-lg w-[600px]">
 			<p className="p-2 pb-4 border-b-2 text-md ">
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
 				temporibus voluptatem. Deleniti quisquam maiores animi
