@@ -4,6 +4,105 @@ import Title from "./Title";
 function Products() {
 	const products = [
 		{
+			id: 8,
+			name: "Aloe Vera Gel",
+			price: 139,
+			size: 100,
+			quantity: 1,
+			ingredients: ["Aloe vera"],
+			imageUri:
+				"https://res.cloudinary.com/baibhavmalaviya/image/upload/v1708667173/Groomify/product_08_e7irrt.jpg",
+			desc: "",
+		},
+		{
+			id: 9,
+			name: "Nourishing Shampoo",
+			price: 862,
+			size: 100,
+			quantity: 1,
+			ingredients: ["Aloe vera"],
+			imageUri:
+				"https://res.cloudinary.com/baibhavmalaviya/image/upload/v1708667184/Groomify/product_09_da1an3.jpg",
+			desc: "",
+		},
+		{
+			id: 10,
+			name: "Anti Dandruff Conditioner",
+			price: 893,
+			size: 100,
+			quantity: 1,
+			ingredients: ["Aloe vera"],
+			imageUri:
+				"https://res.cloudinary.com/baibhavmalaviya/image/upload/v1708667196/Groomify/product_10_jvaxlo.jpg",
+			desc: "",
+		},
+		{
+			id: 11,
+			name: "Makeup setting spray",
+			price: 299,
+			size: 60,
+			quantity: 1,
+			ingredients: ["Aloe vera"],
+			imageUri:
+				"https://res.cloudinary.com/baibhavmalaviya/image/upload/v1708667201/Groomify/product_11_cahnz5.jpg",
+			desc: "",
+		},
+		{
+			id: 12,
+			name: "Long wear matte lipstick",
+			price: 199,
+			size: null,
+			quantity: 1,
+			ingredients: ["Aloe vera"],
+			imageUri:
+				"https://res.cloudinary.com/baibhavmalaviya/image/upload/v1708667207/Groomify/product_12_nmlgww.jpg",
+			desc: "",
+		},
+		{
+			id: 13,
+			name: "Waterproof mascara",
+			price: 199,
+			size: null,
+			quantity: 1,
+			ingredients: ["Aloe vera"],
+			imageUri:
+				"https://res.cloudinary.com/baibhavmalaviya/image/upload/v1708667214/Groomify/product_13_ks5d9j.jpg",
+			desc: "",
+		},
+		{
+			id: 14,
+			name: "Organic  Sanitary Pads",
+			price: 169,
+			size: null,
+			quantity: 1,
+			ingredients: ["Aloe vera"],
+			imageUri:
+				"https://res.cloudinary.com/baibhavmalaviya/image/upload/v1708667220/Groomify/product_14_ybqpnn.jpg",
+			desc: "",
+		},
+		{
+			id: 15,
+			name: "Eco-friendly Menstrual cup ",
+			price: 149,
+			size: null,
+			quantity: 1,
+			ingredients: ["Aloe vera"],
+			imageUri:
+				"https://res.cloudinary.com/baibhavmalaviya/image/upload/v1708667225/Groomify/product_15_p9mr81.jpg",
+			desc: "",
+		},
+		{
+			id: 15,
+			name: "Creamy brush palatte",
+			price: 149,
+			size: null,
+			quantity: 1,
+			ingredients: ["Aloe vera"],
+			imageUri:
+				"https://res.cloudinary.com/baibhavmalaviya/image/upload/v1708667231/Groomify/product_16_ullnyr.jpg",
+			desc: "",
+		},
+		{
 			id: 1,
 			name: "Sheet Mask",
 			price: 449,
