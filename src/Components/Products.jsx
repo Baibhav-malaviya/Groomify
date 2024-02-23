@@ -92,7 +92,7 @@ function Products() {
 			desc: "",
 		},
 		{
-			id: 15,
+			id: 16,
 			name: "Creamy brush palatte",
 			price: 149,
 			size: null,
@@ -100,6 +100,72 @@ function Products() {
 			ingredients: ["Aloe vera"],
 			imageUri:
 				"https://res.cloudinary.com/baibhavmalaviya/image/upload/v1708667231/Groomify/product_16_ullnyr.jpg",
+			desc: "",
+		},
+		{
+			id: 17,
+			name: "Freshing body spray",
+			price: 149,
+			size: 100,
+			quantity: 1,
+			ingredients: ["Aloe vera"],
+			imageUri:
+				"https://res.cloudinary.com/baibhavmalaviya/image/upload/v1708667238/Groomify/product_17_ncsuhh.jpg",
+			desc: "",
+		},
+		{
+			id: 18,
+			name: "Natural Deodorant Wipes",
+			price: 449,
+			size: null,
+			quantity: 1,
+			ingredients: ["Aloe vera"],
+			imageUri:
+				"https://res.cloudinary.com/baibhavmalaviya/image/upload/v1708667243/Groomify/product_18_n5umny.jpg",
+			desc: "",
+		},
+		{
+			id: 19,
+			name: "Scalp massager",
+			price: 199,
+			size: null,
+			quantity: 1,
+			ingredients: ["Aloe vera"],
+			imageUri:
+				"https://res.cloudinary.com/baibhavmalaviya/image/upload/v1708667250/Groomify/product_19_ijetqy.jpg",
+			desc: "",
+		},
+		{
+			id: 20,
+			name: "Hair Growth Serum",
+			price: 699,
+			size: 30,
+			quantity: 1,
+			ingredients: ["Onion"],
+			imageUri:
+				"https://res.cloudinary.com/baibhavmalaviya/image/upload/v1708667256/Groomify/product_20_t2wgio.jpg",
+			desc: "",
+		},
+		{
+			id: 21,
+			name: "Silk Pillow case",
+			price: 259,
+			size: null,
+			quantity: 1,
+			ingredients: ["Silk"],
+			imageUri:
+				"https://res.cloudinary.com/baibhavmalaviya/image/upload/v1708668478/Groomify/product_21_pjpipe.jpg",
+			desc: "",
+		},
+		{
+			id: 22,
+			name: "Hydrating foundation",
+			price: 399,
+			size: 100,
+			quantity: 1,
+			ingredients: ["Silk"],
+			imageUri:
+				"https://res.cloudinary.com/baibhavmalaviya/image/upload/v1708668483/Groomify/product_22_fghbyx.jpg",
 			desc: "",
 		},
 		{
